@@ -5,8 +5,7 @@ import { Universe } from "./universe.js";
 import cors from "cors";
 const app = express();
 const server = createServer(app);
-
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
   res.send("Hello world!");
